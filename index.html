@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Register / Login Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page" id="first">
+        <div class="back">
+          <div class="outer">
+            <div class="content">
+              <div class="form-wrapper">
+                <h1 class="heading">Get's Started</h1>
+                <p class="login-link">
+                  Already have an account
+                  <a href="#" class="login-btn">Login</a>
+                </p>
+                <div class="social-logins">
+                  <a href="" class="social-login facebook">
+                    <img src="f.png" alt="" />
+                    <span>Signup with Facebook</span>
+                  </a>
+                  <a href="" class="social-login google">
+                    <img src="g.png" alt="" />
+                    <span>Signup with Google</span>
+                  </a>
+                </div>
+                <div class="or"></div>
+                <form action="#" id="register">
+                  <div class="item">
+                    <label for="email">Email address</label>
+                    <div class="input">
+                      <ion-icon name="mail-outline"></ion-icon>
+                      <input
+                        type="text"
+                        id="email"
+                        placeholder="example@mail.com"
+                      />
+                    </div>
+                    <p class="error-msg">Please enter a valid email address</p>
+                  </div>
+                  <div class="item">
+                    <label for="password">Password</label>
+                    <div class="input">
+                      <ion-icon name="lock-closed-outline"></ion-icon>
+                      <input
+                        type="password"
+                        id="password"
+                        placeholder="••••••••••••"
+                      />
+                      <ion-icon class="eye" name="eye-off-outline"></ion-icon>
+                    </div>
+                    <p class="error-msg">
+                      Password must be at least 8 character long
+                    </p>
+                  </div>
+                  <div class="item terms">
+                    <div class="input checkbox">
+                      <input type="checkbox" name="" id="accept" />
+                      <label for="accept">
+                        I accept the <a href="#">terms of service</a> and
+                        <a href="#">privacy policy</a>
+                      </label>
+                    </div>
+                    <p class="error-msg">
+                      You must accept the terms and conditions
+                    </p>
+                  </div>
+                  <div class="item">
+                    <button class="btn">Register</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page" id="second">
+        <div class="front">
+          <div class="outer">
+            <div class="content">
+              <img src="bg.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="back" id="third">
+          <div class="outer">
+            <div class="content">
+              <div class="helper-class">
+                <img src="bg.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page" id="fourth">
+        <div class="front">
+          <div class="outer">
+            <div class="content">
+              <div class="form-wrapper">
+                <h1 class="heading">Welcome Back</h1>
+                <p class="login-link">
+                  Need a account
+                  <a href="#" class="register-btn">Register</a>
+                </p>
+                <div class="social-logins">
+                  <a href="" class="social-login facebook">
+                    <img src="f.png" alt="" />
+                    <span>Login with Facebook</span>
+                  </a>
+                  <a href="" class="social-login google">
+                    <img src="g.png" alt="" />
+                    <span>Login with Google</span>
+                  </a>
+                </div>
+                <div class="or"></div>
+                <form action="#" id="login">
+                  <div class="item">
+                    <label for="login-email">Email address</label>
+                    <div class="input">
+                      <ion-icon name="mail-outline"></ion-icon>
+                      <input
+                        type="text"
+                        id="login-email"
+                        placeholder="example@mail.com"
+                      />
+                    </div>
+                    <p class="error-msg">Please enter a valid email address</p>
+                  </div>
+                  <div class="item">
+                    <label for="login-password">Password</label>
+                    <div class="input">
+                      <ion-icon name="lock-closed-outline"></ion-icon>
+                      <input
+                        type="password"
+                        id="login-password"
+                        placeholder="••••••••••••"
+                      />
+                      <ion-icon class="eye" name="eye-off-outline"></ion-icon>
+                    </div>
+                    <p class="error-msg">Password or Email is incorrect</p>
+                  </div>
+                  <div class="item terms">
+                    <div class="input checkbox">
+                      <input type="checkbox" name="" id="remember" />
+                      <label for="remember"> Remember me </label>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <button class="btn">Login</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ionicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

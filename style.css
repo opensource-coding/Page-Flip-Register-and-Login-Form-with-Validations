@@ -1,0 +1,272 @@
+/* Poppins Font */
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #303030;
+  background-color: #5ea4ff;
+}
+.container {
+  width: 1000px;
+  height: 650px;
+  position: relative;
+  z-index: 100;
+  perspective: 1300px;
+  backface-visibility: hidden;
+}
+.page {
+  position: absolute;
+  transform-style: preserve-3d;
+  transition-property: all;
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  transform-origin: left center;
+}
+#first,
+#first .back {
+  transform: rotateY(180deg);
+}
+#first {
+  z-index: 102;
+}
+#second {
+  z-index: 103;
+  transition: transform 0.8s ease-in-out;
+}
+#third .content {
+  width: 400px;
+}
+#fourth {
+  z-index: 101;
+}
+.page > div,
+.outer,
+.content,
+.helper-class {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+.page > div {
+  width: 100%;
+  transform-style: preserve-3d;
+}
+.back {
+  transform: rotateY(180deg);
+}
+.outer {
+  width: 100%;
+  overflow: hidden;
+  z-index: 999;
+}
+.content {
+  width: 200%;
+  background: #fff;
+}
+.front .content {
+  left: -100%;
+}
+#second .content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#third .content img {
+  width: 250%;
+}
+#fourth .content {
+  padding-left: 100%;
+}
+.form-wrapper {
+  width: 50%;
+  height: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.heading {
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1;
+}
+.login-link {
+  font-size: 14px;
+  font-weight: 300;
+  color: #808080;
+  margin-bottom: 15px;
+}
+a {
+  color: #5ea4ff;
+  text-decoration: none;
+}
+.social-logins {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  white-space: nowrap;
+}
+.social-logins a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 15px;
+  cursor: pointer;
+}
+.social-logins img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.facebook {
+  color: #fff;
+  background-color: #3b5998;
+}
+.google {
+  color: #303030;
+  background-color: #fff;
+  border: 1px solid #cfcfcf;
+}
+.or {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background-color: #cfcfcf;
+  margin: 30px 0;
+}
+.or::before {
+  content: "or";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 0 10px;
+  font-size: 12px;
+  color: #808080;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+form .input:not(.checkbox) {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  font-size: 14px;
+}
+form label {
+  width: 100%;
+  font-size: 12px;
+  line-height: 3;
+}
+form input:not([type="checkbox"]) {
+  display: block;
+  width: 100%;
+  height: 45px;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+}
+form ion-icon {
+  font-size: 20px;
+  color: #808080;
+}
+form .input:not(.checkbox):focus-within {
+  border-color: #5ea4ff;
+}
+form .input:not(.checkbox).error {
+  border-color: #ff5e5e;
+}
+form .error-msg {
+  color: #ff5e5e;
+  font-size: 12px;
+  margin-top: 5px;
+  position: absolute;
+  display: none;
+}
+form .input.error ~ .error-msg {
+  display: block;
+}
+form ion-icon.eye {
+  cursor: pointer;
+}
+form .terms {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+form .terms .error-msg {
+  bottom: -10px;
+}
+form .terms input[type="checkbox"] {
+  cursor: pointer;
+}
+form .btn {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #5ea4ff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+#fourth .form-wrapper {
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .form-wrapper {
+    padding: 20px;
+  }
+  .social-logins {
+    flex-direction: column;
+  }
+}
+@media (max-width: 700px) {
+  body {
+    height: max-content;
+    overflow: visible;
+  }
+  .container {
+    width: 100%;
+    height: 100vh;
+  }
+  .page {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    transition: all 0.3s;
+  }
+  #second {
+    display: none;
+  }
+}
